@@ -47,7 +47,8 @@ export const TaskCard: FC<Props> = ({taskTitle, doneTask, onToggleDoneTask, delT
     return (
         <>
         <div>
-            <Card colorScheme={doneTask ? 'Red 700' : 'Red 100'}>
+            <Card backgroundColor={doneTask ? "red" : "green"}>
+                <Box>
                 <CardBody>
                     <Flex minWidth='max-content'>
                         <Box>
@@ -79,8 +80,9 @@ export const TaskCard: FC<Props> = ({taskTitle, doneTask, onToggleDoneTask, delT
                         <Button onClick={delTask}>
                             <DeleteIcon />
                         </Button>
-                    </Flex>
+                    </Flex>                    
                 </CardBody>
+                </Box>
             </Card>
         </div>
         </>
